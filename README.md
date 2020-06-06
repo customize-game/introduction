@@ -1,115 +1,77 @@
-# introduction
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# ゲームについて
+## Available Scripts
 
-自分だけのカスタム機を使ってバトル！  
-バトルロイヤル、チーム戦
+In the project directory, you can run:
 
-## ロボットを自分専用にカスタマイズ
+### `npm start`
 
-### 剣が装備できるのは手だけじゃない
-足に剣を装備させてキックの攻撃力UP!  
-頭に剣を装備させてタックルの攻撃力UP!  
-どこに装備させるかでステータスが変化。自分の戦い方に合わせたカスタマイズが可能
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### 赤いだけの専用機じゃない・・・内部パラメータもカスタマイズ
-ベースになるロボットにはそれぞれパラメータチップを埋め込める場所が用意されている  
-パラメータチップを組み合わせて見た目は一緒でも性能が全然違うロボットが完成する
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-### ベースとなるロボット自体の性能を活かす／補う
-ベースとなるロボットによっても性能に差がある  
+### `npm test`
 
-### 類似アプリ
-#### カスタムロボ
-#### ガンダムブレイカー
-ベースのロボットに装備を組み合わせて対戦  
-→装備が特定の場所にしかつけられない
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## クロスセーブ対応
-ゲームのセーブデータをスマホと共有させる  
-家ではPCやPS4でゲームをプレイ  
-通学、通勤の最中にスマホで装備の変更等を行える  
-→**家に帰って作った装備をさっそく試したい！**
+### `npm run build`
 
-### 類似アプリ
-#### Switch Online  
-家に帰ってSplatoon2で遊ぶ→学校や会社ではSwitch Onlineで友達と会話のきっかけに  
-→戦績を見るだけでできる操作は少ない
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## プラットフォーム
-### メイン
-* PC(Steamで公開)
-* PS4
-* Switch(できれば)
-### スマホ
-* Android
-* iOS
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-# ゲーム作成メンバー募集中！
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## チーム体制
-### プログラマ・・・4人
+### `npm run eject`
 
-#### 言語
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Unity・・・C#  
-サーバー・・・Rust  
-スマホアプリ・・・React Native  
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### サウンド担当・・・2人
-#### 内訳パターン1
-SEはフリー素材を使用  
-BGM担当・・・2人
-#### 内訳パターン2
-SE担当・・・1人  
-BGM担当・・・1人
-### グラフィック担当・・・2人
-#### 内訳
-3Dモデル担当・・・1人  
-UI担当・・・1人
-## ミーティング
-毎週日程を決めて **Discord** で進捗報告会  
-大体30分前後  
-### ミーティング内容
-* 前回のミーティングからの進捗  
-* 次回のミーティングまでのタスク  
-## タスク管理
-### Github
-Githubのissueとかんばんを使ってタスク管理  
-## スクリプト管理
-### Github
-理想は知名度上がってからprivate化
-## グラフィック&サウンド管理
-### Googleドライブ
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-# その他ゲームの仕様について詳細
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-# 操作
+## Learn More
 
-|PS4|PC|概要|備考|
-|---|---|---|---|
-|左スティック|WASD|移動||
-|右スティック|マウス|カメラ操作||
-|十字上||メニュー操作||
-|十字下||メニュー操作||
-|十字左||メニュー操作||
-|十字右||メニュー操作||
-|〇||決定||
-|×|スペース|ジャンプ||
-|△|左クリック|攻撃1||
-|□|右クリック|攻撃2||
-|L1||特殊1|装備によって操作が変わる|
-|L2|左Shift|ダッシュ||
-|L3||||
-|R1||特殊2|装備によって操作が変わる|
-|R2||特殊3|装備によって操作が変わる|
-|R3||カメラ位置リセット||
-|Option||||
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-# ロボットの素体一覧
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-|素体名|性能備考|
-|---|---|
-|||
-|||
-|||
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## gh-pages
+
+Publish files to a `gh-pages` branch on GitHub (or any other branch anywhere else).
+
+### `npm run deplop` 
+
+This command uses `gh-pages to deploy to GitHub Pages.  
+Note: Be sure to execute the Build command before calling
