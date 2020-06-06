@@ -1,6 +1,21 @@
 import React from 'react';
 
+import { makeStyles } from '@material-ui/core/styles';
+
+import Divider from '@material-ui/core/Divider';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center'
+  },
+}));
+
 export default function() {
+  const classes = useStyles();
   return (
     <div>
       <h1>introduction</h1>
@@ -41,24 +56,93 @@ export default function() {
       <h3>スマホ</h3>
       * Android<br />
       * iOS
-      <h1>ゲーム作成メンバー募集中！</h1>
-      <h2>チーム体制</h2>
-      <h3>プログラマ・・・4人</h3>
       <h4>言語</h4>
       Unity・・・C#<br />
       サーバー・・・Rust  <br />
-      スマホアプリ・・・React Native
-      <h3>サウンド担当・・・2人</h3>
-      <h4>内訳パターン1</h4>
-      SEはフリー素材を使用  <br />
-      BGM担当・・・2人
-      <h4>内訳パターン2</h4>
-      SE担当・・・1人  <br />
-      BGM担当・・・1人
-      <h3>グラフィック担当・・・2人</h3>
-      <h4>内訳</h4>
-      3Dモデル担当・・・1人  <br />
-      UI担当・・・1人
+      スマホアプリ・・・React Native<br />
+
+      <Divider variant="middle" ></Divider>
+      
+      <Typography align="center" gutterBottom variant="h3">
+      ゲーム作成メンバー募集中！
+      </Typography>
+      <Typography align="center" gutterBottom variant="h4">
+        Program
+      </Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={6} md={3}>
+          <Paper className={classes.paper}>
+          <Typography gutterBottom variant="h5">
+            Shass
+          </Typography>
+          <a class="twitter-timeline" data-height="800" data-theme="dark" href="https://twitter.com/shassbeleth?ref_src=twsrc%5Etfw">Tweets by shassbeleth</a>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Paper className={classes.paper}>
+          <Typography gutterBottom variant="h5">
+            1saver
+          </Typography>
+        </Paper>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Paper className={classes.paper}>
+          <Typography gutterBottom variant="h5">
+            メンバー募集中！
+          </Typography>
+        </Paper>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Paper className={classes.paper}>
+            <Typography gutterBottom variant="h5">
+              メンバー募集中！
+            </Typography>
+          </Paper>
+        </Grid>
+      </Grid>
+      <Typography align="center" gutterBottom variant="h4">
+        3D Graphic
+      </Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={6} md={3}>
+          <Paper className={classes.paper}>
+            <Typography gutterBottom variant="h5">
+              メンバー募集中！
+            </Typography>
+          </Paper>
+        </Grid>
+      </Grid>
+      <Typography align="center" gutterBottom variant="h4">
+        UI Graphic
+      </Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={6} md={3}>
+          <Paper className={classes.paper}>
+            <Typography gutterBottom variant="h5">
+              メンバー募集中！
+            </Typography>
+          </Paper>
+        </Grid>
+      </Grid>
+      <Typography align="center" gutterBottom variant="h4">
+        Sound
+      </Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={6} md={3}>
+          <Paper className={classes.paper}>
+            <Typography gutterBottom variant="h5">
+              メンバー募集中！
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Paper className={classes.paper}>
+            <Typography gutterBottom variant="h5">
+              メンバー募集中！
+            </Typography>
+          </Paper>
+        </Grid>
+      </Grid>
       <h2>ミーティング</h2>
       毎週日程を決めて <b>Discord</b> で進捗報告会  <br />
       大体30分前後  
