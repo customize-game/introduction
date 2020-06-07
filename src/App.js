@@ -1,8 +1,32 @@
 import React from 'react';
 
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
+import Divider from '@material-ui/core/Divider';
+
+import './App.css';
+import Members from './components/Members';
+
+import SystemStructure from './images/SystemStructure';
+
 export default function() {
+
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const theme = React.useMemo(
+    () =>
+      createMuiTheme({
+        palette: {
+          type: prefersDarkMode ? 'dark' : 'light',
+        },
+      }),
+    [prefersDarkMode],
+  );
+
   return (
-    <div>
+    <ThemeProvider theme={theme}> 
+      <CssBaseline/>
       <h1>introduction</h1>
       <h1>ゲームについて</h1>
       <div className="text">
@@ -41,39 +65,17 @@ export default function() {
       <h3>スマホ</h3>
       * Android<br />
       * iOS
-      <h1>ゲーム作成メンバー募集中！</h1>
-      <h2>チーム体制</h2>
-      <h3>プログラマ・・・4人</h3>
       <h4>言語</h4>
       Unity・・・C#<br />
       サーバー・・・Rust  <br />
-      スマホアプリ・・・React Native
-      <h3>サウンド担当・・・2人</h3>
-      <h4>内訳パターン1</h4>
-      SEはフリー素材を使用  <br />
-      BGM担当・・・2人
-      <h4>内訳パターン2</h4>
-      SE担当・・・1人  <br />
-      BGM担当・・・1人
-      <h3>グラフィック担当・・・2人</h3>
-      <h4>内訳</h4>
-      3Dモデル担当・・・1人  <br />
-      UI担当・・・1人
-      <h2>ミーティング</h2>
-      毎週日程を決めて <b>Discord</b> で進捗報告会  <br />
-      大体30分前後  
-      <h3>ミーティング内容</h3>
-      * 前回のミーティングからの進捗  <br />
-      * 次回のミーティングまでのタスク  
-      <h2>タスク管理</h2>
-      <h3>Github</h3>
-      Githubのissueとかんばんを使ってタスク管理  
-      <h2>スクリプト管理</h2>
-      <h3>Github</h3>
-      理想は知名度上がってからprivate化
-      <h2>グラフィック&サウンド管理</h2>
-      <h3>Googleドライブ</h3>
+      スマホアプリ・・・React Native<br />
+
+      <SystemStructure />
+      <Divider variant="middle" ></Divider>
+      <Members />
+      
       <h1>その他ゲームの仕様について詳細</h1>
+
       <h1>操作</h1>
       <table border="1">
         <tr><th>PS4</th><th>PC</th><th>概要</th><th>備考</th></tr>
@@ -102,6 +104,6 @@ export default function() {
         <tr><td></td><td></td></tr>
         <tr><td></td><td></td></tr>
       </table>
-    </div>
+    </ThemeProvider> 
   );
 }
