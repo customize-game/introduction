@@ -1,23 +1,32 @@
 import React from 'react';
 
-import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Divider from '@material-ui/core/Divider';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center'
-  },
-}));
+import './App.css';
+import Members from './components/Members';
+
+import SystemStructure from './images/SystemStructure';
 
 export default function() {
-  const classes = useStyles();
+
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const theme = React.useMemo(
+    () =>
+      createMuiTheme({
+        palette: {
+          type: prefersDarkMode ? 'dark' : 'light',
+        },
+      }),
+    [prefersDarkMode],
+  );
+
   return (
-    <div>
+    <ThemeProvider theme={theme}> 
+      <CssBaseline/>
       <h1>introduction</h1>
       <h1>ゲームについて</h1>
       <div className="text">
@@ -61,103 +70,12 @@ export default function() {
       サーバー・・・Rust  <br />
       スマホアプリ・・・React Native<br />
 
+      <SystemStructure />
       <Divider variant="middle" ></Divider>
+      <Members />
       
-      <Typography align="center" gutterBottom variant="h3">
-      ゲーム作成メンバー募集中！
-      </Typography>
-      <Typography align="center" gutterBottom variant="h4">
-        Program
-      </Typography>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>
-          <Typography gutterBottom variant="h5">
-            Shass
-          </Typography>
-          <a class="twitter-timeline" data-height="800" data-theme="dark" href="https://twitter.com/shassbeleth?ref_src=twsrc%5Etfw">Tweets by shassbeleth</a>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>
-          <Typography gutterBottom variant="h5">
-            1saver
-          </Typography>
-        </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>
-          <Typography gutterBottom variant="h5">
-            メンバー募集中！
-          </Typography>
-        </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>
-            <Typography gutterBottom variant="h5">
-              メンバー募集中！
-            </Typography>
-          </Paper>
-        </Grid>
-      </Grid>
-      <Typography align="center" gutterBottom variant="h4">
-        3D Graphic
-      </Typography>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>
-            <Typography gutterBottom variant="h5">
-              メンバー募集中！
-            </Typography>
-          </Paper>
-        </Grid>
-      </Grid>
-      <Typography align="center" gutterBottom variant="h4">
-        UI Graphic
-      </Typography>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>
-            <Typography gutterBottom variant="h5">
-              メンバー募集中！
-            </Typography>
-          </Paper>
-        </Grid>
-      </Grid>
-      <Typography align="center" gutterBottom variant="h4">
-        Sound
-      </Typography>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>
-            <Typography gutterBottom variant="h5">
-              メンバー募集中！
-            </Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>
-            <Typography gutterBottom variant="h5">
-              メンバー募集中！
-            </Typography>
-          </Paper>
-        </Grid>
-      </Grid>
-      <h2>ミーティング</h2>
-      毎週日程を決めて <b>Discord</b> で進捗報告会  <br />
-      大体30分前後  
-      <h3>ミーティング内容</h3>
-      * 前回のミーティングからの進捗  <br />
-      * 次回のミーティングまでのタスク  
-      <h2>タスク管理</h2>
-      <h3>Github</h3>
-      Githubのissueとかんばんを使ってタスク管理  
-      <h2>スクリプト管理</h2>
-      <h3>Github</h3>
-      理想は知名度上がってからprivate化
-      <h2>グラフィック&サウンド管理</h2>
-      <h3>Googleドライブ</h3>
       <h1>その他ゲームの仕様について詳細</h1>
+
       <h1>操作</h1>
       <table border="1">
         <tr><th>PS4</th><th>PC</th><th>概要</th><th>備考</th></tr>
@@ -186,6 +104,6 @@ export default function() {
         <tr><td></td><td></td></tr>
         <tr><td></td><td></td></tr>
       </table>
-    </div>
+    </ThemeProvider> 
   );
 }
