@@ -71,7 +71,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 Publish files to a `gh-pages` branch on GitHub (or any other branch anywhere else).
 
-### `npm run deplop` 
+### `npm run deploy` 
 
 This command uses `gh-pages to deploy to GitHub Pages.  
 Note: Be sure to execute the Build command before calling
